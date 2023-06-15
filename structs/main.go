@@ -44,7 +44,7 @@ func main() {
 	}
 
 	//{firstName:Jim lastName:Party contactInfo:{email:jim@gmail.com zipCode:12345}}
-	jim.print()
+	//jim.print()
 
 	// pass by value not working
 	//jim.updateNameV1("jimmy")
@@ -54,6 +54,17 @@ func main() {
 	jimPointer := &jim
 	jimPointer.updateName("jimmy")
 	jim.print()
+
+	//Turn address into value with *address
+	//Turn value into address with &value
+
+	//SHORTCUT
+	jim.updateName("jimmy")
+	jim.print()
+
+	name := "Elif"
+	//Prints memory address
+	fmt.Println(&name)
 }
 
 func (p person) print() {
